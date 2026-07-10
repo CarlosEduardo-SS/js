@@ -3,6 +3,8 @@ const GLOBAL_URL = "https://6a5032c2f45d5352b6121b52.mockapi.io/produtos";
 async function carregarProdutos() {
   const resposta = await fetch(GLOBAL_URL);
   const produtos = await resposta.json();
+
+  listarProdutos(produtos);
 }
 
 function listarProdutos(produtos) {
