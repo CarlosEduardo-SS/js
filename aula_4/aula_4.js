@@ -5,7 +5,13 @@ async function buscarCep() {
   const resposta = await fetch(url);
   const dados = await resposta.json();
 
-  console.log(dados);
+  popularInputs(dados);
 }
 
-function popularInputs(dados) {}
+function popularInputs(dados) {
+  document.querySelector("#logradouro").value = dados.logradouro;
+  document.querySelector("#cidade").value = dados.localidade;
+  document.querySelector("#bairro").value = dados.bairro;
+  document.querySelector("#estado").value = dados.estado;
+  document.querySelector("#regiao").value = dados.regiao;
+}
