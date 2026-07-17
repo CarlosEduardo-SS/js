@@ -61,8 +61,8 @@ async function removerProduto(id) {
 async function cadastrarProduto() {
   const produto = {
     nome: document.querySelector("#nome").value,
-    preco: Number(document.querySelector("#preco").value),
-    quantidade: Number(document.querySelector("#quantidade").value),
+    preco: Number(document.querySelector("#preco").value) || 0,
+    quantidade: Number(document.querySelector("#quantidade").value) || 0,
   };
 
   try {
